@@ -1,0 +1,27 @@
+<?php
+
+use Wenpeng\Curl\Curl;
+
+/**
+ * Performs an HTTP request.
+ */
+ function hunter_http_request($url, array $params = array()) {
+   $curl = Curl::init();
+
+   if(empty($params)){
+     $curl->url($url);
+   }else {
+     $curl->post($params)->url($url);
+   }
+
+   if ($curl->error()) {
+        return $curl->message();
+    } else {
+        // 任务进程信息
+        $info = $curl->info();
+
+        // 任务结果内容
+        $content = $curl->data();
+    }
+    return $content;
+ }

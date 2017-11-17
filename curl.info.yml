@@ -1,0 +1,5 @@
+name: Curl
+type: module
+description: A lightweight curl module.
+core: 1.x
+package: Hunter

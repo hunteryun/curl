@@ -1,0 +1,5 @@
+{
+    "require": {
+        "wenpeng/curl": "^1.0"
+    }
+}
