@@ -5,7 +5,7 @@ use Wenpeng\Curl\Curl;
 /**
  * Performs an HTTP request.
  */
- function hunter_http_request($url, array $params = array()) {
+ function hunter_http_request($url, $params = array()) {
    $curl = Curl::init();
 
    if(empty($params)){
